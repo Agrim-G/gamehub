@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameHub - Your Ultimate Gaming Portal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">GameHub</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#releases">Releases</a></li>
+                <li><a href="#history">History</a></li>
+                <li><a href="#buy">Buy Games</a></li>
+                <li><a href="#recommendations">Recommendations</a></li>
+            </ul>
+        </nav>
+        <button id="themeToggle">Toggle Dark Mode</button>
+    </header>
+
+    <section id="home" class="hero-section">
+        <div class="hero-text">
+            <h1>Welcome to GameHub</h1>
+            <p>Your ultimate destination for everything gaming. Explore new releases, dive into game history, and purchase your favorite titles all in one place.</p>
+            <button onclick="scrollToSection('releases')">Explore Now</button>
+        </div>
+    </section>
+
+    <section id="releases" class="content-section">
+        <h2>Latest Releases</h2>
+        <div class="game-grid" id="gameGrid">
+            <!-- Games will be loaded dynamically here -->
+        </div>
+    </section>
+
+    <section id="history" class="content-section">
+        <h2>Game History & Stories</h2>
+        <div class="history-container">
+            <article>
+                <h3>The Rise of RPGs</h3>
+                <p>Explore how role-playing games evolved from tabletop adventures to immersive digital experiences.</p>
+            </article>
+            <article>
+                <h3>The Evolution of Shooters</h3>
+                <p>From classic arcade shooters to today's tactical masterpieces, see how the genre has grown.</p>
+            </article>
+            <!-- Add more articles as needed -->
+        </div>
+    </section>
+
+    <section id="buy" class="content-section">
+        <h2>Where to Buy</h2>
+        <p>Find the best deals on the latest games and consoles.</p>
+        <div class="buy-links">
+            <a href="https://www.playstation.com/en-us/games/">PlayStation Store</a>
+            <a href="https://store.steampowered.com/">Steam</a>
+            <a href="https://www.microsoft.com/en-us/store/b/xbox">Xbox Store</a>
+        </div>
+    </section>
+
+    <section id="recommendations" class="content-section">
+        <h2>Personalized Recommendations</h2>
+        <div class="recommendation-form">
+            <label for="genre">Select your favorite genre:</label>
+            <select id="genre">
+                <option value="rpg">RPG</option>
+                <option value="action">Action</option>
+                <option value="adventure">Adventure</option>
+                <option value="shooter">Shooter</option>
+            </select>
+            <button onclick="recommendGames()">Get Recommendations</button>
+        </div>
+        <div class="recommendations-grid" id="recommendationsGrid">
+            <!-- Recommendations will be loaded dynamically here -->
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 GameHub. All Rights Reserved.</p>
+    </footer>
+
+    <div id="gameModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modalGameContent"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
